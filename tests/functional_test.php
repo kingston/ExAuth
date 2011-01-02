@@ -13,6 +13,14 @@ class AuthFunctionalTest extends BaseWebTest{
         $this->assertHeader("Location", new PatternExpectation("/token=[a-f0-9]{32}/"));
     }
     
+    function testDenyAccessToProtectedFiles() {
+        $protectedFiles = array("config.php", ".htaccess", "db/data.db", "lib/shared.php");
+        foreach ($protectedFiles as $file) {
+            $this->get($this->baseUrl() . $file);
+            $this->assertResponse(403);
+        }
+    }
+    
     function testValidAuthAndVerify() {
         $params = $this->prepareAuth();
         $page = $this->post($this->verifyUrl(), $params);

@@ -1,0 +1,14 @@
+# Deny access to all files, except auth.php and verify.php
+deny from all
+
+<Files "auth.php">
+    allow from all
+    <IfModule mod_webauth.c>
+        AuthType WebAuth
+        require valid-user
+    </IfModule>
+</Files>
+
+<Files "verify.php>
+    allow from all
+</Files>

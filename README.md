@@ -18,8 +18,9 @@ Requirements
 Installation
 -------------
 1. Go through config.php, customizing it for your application
-2. Copy the auth folder to a web-space you own in the stanford.edu domain
-3. Set up your own external website to interface with ExAuth
+2. Copy the auth folder to a CGI-enabled web-space you own in the stanford.edu domain
+3. Secure your web-space as described here: https://itservices.stanford.edu/serivce/web/centralhosting/webauth/unix
+4. Set up your own external website to interface with ExAuth
 
 Configuration
 -------------
@@ -73,3 +74,5 @@ Notes
 -----
 
 ExAuth is completely unaffiliated with Stanford University and licensed under the MIT License.  I haven't done a complete security audit of the code so can't guarantee anything, other than it has worked for me.
+
+If you wish to run the automated tests, you must fill in the TEST_USER setting with a valid SUNetID.

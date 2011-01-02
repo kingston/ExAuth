@@ -17,12 +17,16 @@ class BaseTest extends UnitTestCase {
 class BaseWebTest extends WebTestCase {
     protected $testurl = "http://127.0.0.1:8080/auth/";
     
+    function baseUrl() {
+        return $this->testurl;
+    }
+    
     function authUrl() {
-        return $this->testurl . "auth.php";
+        return $this->baseUrl() . "auth.php";
     }
     
     function verifyUrl() {
-        return $this->testurl . "verify.php";
+        return $this->baseUrl() . "verify.php";
     }
 
     function setUp() {
