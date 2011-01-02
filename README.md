@@ -48,6 +48,7 @@ A behind-the-scenespeek at what's going on:
 If auth.php encounters an error, it will forward the user to <error_url>?message=<error_message>
 
 /verify.php (POST { user_token => <token>, user_ip => <user_ip>, secret => <secret> } from site's server)
+
 1. Verifies the IP requestor is from a valid set of IPs
 2. Verifies the SHA(secret) is valid
 3. Deletes any database entries with timed-out entries
