@@ -41,6 +41,7 @@ Process
 A behind-the-scenespeek at what's going on:
 
 /auth.php (GET from user)
+
 1. Verifies referrer is from allowed app (if set)
 2. Deletes any database entries with timed-out entries and tokens with the same IP
 3. Stores a random token in the database along with IP, time of entry, and email

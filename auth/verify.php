@@ -5,7 +5,7 @@ require_once(dirname(__FILE__) . '/lib/shared.php');
 
 try {
     $ip_address = $_SERVER['REMOTE_ADDR'];
-    if(!verify_ip_and_domain($ip_address, explode(",", ALLOWED_IPS), explode(",", ALLOWED_DOMAINS)))
+    if(CHECK_VERIFY_SOURCE && !verify_ip_and_domain($ip_address, explode(",", ALLOWED_IPS), explode(",", ALLOWED_DOMAINS)))
         error_verify("Invalid request");
     
     $secret = $_POST["secret"];
