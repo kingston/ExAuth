@@ -19,7 +19,7 @@ Installation
 -------------
 1. Go through config.php, customizing it for your application
 2. Copy the auth folder to a CGI-enabled web-space you own in the stanford.edu domain
-3. Secure your web-space as described here: https://itservices.stanford.edu/serivce/web/centralhosting/webauth/unix
+3. Secure your web-space as described here: https://itservices.stanford.edu/service/web/centralhosting/webauth/unix
 4. Set up your own external website to interface with ExAuth
 
 Configuration
